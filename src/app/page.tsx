@@ -2,9 +2,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
+
+
 import { isProjectType } from '@/lib/type-guards';
 import { convertFileToJSON } from '@/lib/services/excel-file-handler';
+
+import { Logo } from '@/components/logo'
+import { ResponsiveMenu } from '@/components/responsivemenu'
 import { Navbar } from '@/components/navbar'
+
 import { Button } from "@/components/ui/button"
 
 
@@ -20,16 +26,37 @@ export default async function Home() {
   const projectsFromExcel = isProjectData ? jsonData : [];
 
   return (
-    <div className="">
-      <main className="">
-        <div className="bg-[url('https://source.unsplash.com/random/?Construction&12')] min-h-[90vh] static flex items-center justify-center">
-        <Navbar  />
-          
+    <div>
+
+      <div className="bg-[url('https://source.unsplash.com/random/?Construction&12')] min-h-[90vh]">
+
+        <div className="flex flex-row">
+
+          <div className="pt-4 pl-4 basis-1/2 sm:basis-1/3 sm:pt-8 sm:pl-8 md:pt-14 md:pl-14">
+            <Logo />
+          </div>
+
+          <div className="flex flex-row pl-[6rem] pt-4 basis-1/2 sm:basis-2/3 sm:pl-[20rem] sm:pt-8">
+            <div className="hidden md:flex">
+              <Navbar />
+            </div>
+            <div className="md:hidden">
+              <ResponsiveMenu />
+            </div>
+          </div>
+        </div>
+
+        <div className=" flex items-center justify-center pt-32">
           <div className="text-center text-white bg-gray-700 relative opacity-75 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] p-5">
             <h1 className="text-6xl">MPCE</h1>
             <p className="p-5">Mantenimiento, Proyectos y Construcción Electromecánica</p>
           </div>
         </div>
+
+      </div>
+
+      <main className="">
+
 
         <div className="text-center">
           <h2 className="text-6xl">MPCE</h2>

@@ -18,7 +18,7 @@ export const Navbar = () => {
     <>
       <NavigationMenu>
         <NavigationMenuList>
-          <NavigationMenuItem className="flex flex-row p-10">
+          <NavigationMenuItem className="flex flex-row">
             <Link href="/portafolio" legacyBehavior passHref>
               <NavigationMenu className=" text-white">
                 Documentation
