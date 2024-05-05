@@ -7,7 +7,8 @@ import Link from "next/link";
 import { isProjectType } from '@/lib/type-guards';
 import { convertFileToJSON } from '@/lib/services/excel-file-handler';
 
-import { Logo } from '@/components/logo'
+import { LogoSmall } from '@/components/logosmall'
+import { LogoMedium } from '@/components/logomedium'
 import { ResponsiveMenu } from '@/components/responsivemenu'
 import { Navbar } from '@/components/navbar'
 
@@ -32,11 +33,11 @@ export default async function Home() {
 
         <div className="flex flex-row">
 
-          <div className="pt-4 pl-4 basis-1/2 sm:basis-1/3 sm:pt-8 sm:pl-8 md:pt-14 md:pl-14">
-            <Logo />
+          <div className="pt-4 pl-4 basis-1/2 sm:basis-1/3 sm:pt-8 sm:pl-8 md:pt-12 md:pl-12">
+            <LogoSmall />
           </div>
 
-          <div className="flex flex-row pl-[6rem] pt-4 basis-1/2 sm:basis-2/3 sm:pl-[20rem] sm:pt-8">
+          <div className="flex flex-row pt-4 pr-4 basis-1/2 justify-end sm:basis-2/3 sm:pr-8 sm:pt-8 md:pt-12 md:pl-12">
             <div className="hidden md:flex">
               <Navbar />
             </div>
@@ -46,10 +47,10 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className=" flex items-center justify-center pt-32">
-          <div className="text-center text-white bg-gray-700 relative opacity-75 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] p-5">
+        <div className=" flex items-center justify-center pt-28 sm:pt-48">
+          <div className="text-center text-white bg-gray-700 relative opacity-75 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] p-2 sm:p-5">
             <h1 className="text-6xl">MPCE</h1>
-            <p className="p-5">Mantenimiento, Proyectos y Construcción Electromecánica</p>
+            <p className="sm:p-5">Mantenimiento, Proyectos y Construcción Electromecánica</p>
           </div>
         </div>
 

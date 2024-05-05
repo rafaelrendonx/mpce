@@ -15,26 +15,47 @@ import {
 
 export const Navbar = () => {
   return (
-    <>
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem className="flex flex-row">
-            <Link href="/portafolio" legacyBehavior passHref>
-              <NavigationMenu className=" text-white">
-                Documentation
-              </NavigationMenu>
-            </Link>
-            <Link href="/portafolio" legacyBehavior passHref>
-              <NavigationMenu className=" text-white">
-                Documentation
-              </NavigationMenu>
-            </Link>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-     
-    </>
+    <header className="flex h-20 w-full shrink-0 items-center">
+
+      <div className="flex w-full justify-center">
+        <NavigationMenu className="">
+          <NavigationMenuList>
+            <NavigationMenuLink asChild>
+              <Link
+                className="group inline-flex h-9 w-max items-center justify-center rounded-md text-white text-sm font-medium px-4"
+                href="#"
+              >
+                Servicios
+              </Link>
+            </NavigationMenuLink>
+            <NavigationMenuLink asChild>
+              <Link
+                className="group inline-flex h-9 w-max items-center justify-center rounded-md text-white text-sm font-medium px-4"
+                href="#"
+              >
+                Portafolio
+              </Link>
+            </NavigationMenuLink>
+            <NavigationMenuLink asChild>
+              <Link
+                className="group inline-flex h-9 w-max items-center justify-center rounded-md text-white text-sm font-medium"
+                href="#"
+              >
+                Contacto
+              </Link>
+            </NavigationMenuLink>
+            <NavigationMenuLink asChild>
+            </NavigationMenuLink>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+    </header>
   )
 }
 
 export default Navbar
+
+
+
+
+

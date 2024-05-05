@@ -1,32 +1,74 @@
-import {
-    Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
-} from "@/components/ui/sheet"
+'use client'
 
-import { LogoBurger } from '@/components/logoburger'
+import Link from "next/link";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import { Button } from "@/components/ui/button"
+
 
 export const ResponsiveMenu = () => {
-    return (
-        <Sheet>
-            <SheetTrigger className="text-white">
-                <LogoBurger />
-            </SheetTrigger>
-            <SheetContent className="w-[400px] sm:w-[540px]">
-                <SheetHeader>
-                    <SheetTitle>Are you absolutely sure?</SheetTitle>
-                    <SheetDescription>
-                        This action cannot be undone. This will permanently delete your account
-                        and remove your data from our servers.
-                    </SheetDescription>
-                </SheetHeader>
-            </SheetContent>
-        </Sheet>
+  return (
+    <>
+      <Sheet>
 
-    )
+        <SheetTrigger asChild>
+          <Button size="icon" className="bg-transparent hover:bg-transparent">
+            <MenuIcon className="h-10 w-10" />
+          </Button>
+        </SheetTrigger>
+
+        <SheetContent side="right" className="h-full w-full">
+
+          <SheetHeader>
+            <SheetTitle className="text-2xl font-bold">MPCE</SheetTitle>
+          </SheetHeader>
+
+          <div className="grid gap-2 py-6 pt-10">
+            <Link className="flex w-full items-center py-2 text-lg font-semibold" href="#">
+              Servicios
+            </Link>
+            <Link className="flex w-full items-center py-2 text-lg font-semibold" href="#">
+              Portafolio
+            </Link>
+            <Link className="flex w-full items-center py-2 text-lg font-semibold" href="#">
+              Contacto
+            </Link>
+          </div>
+
+        </SheetContent>
+
+      </Sheet>
+    </>
+
+  )
 }
 
 export default ResponsiveMenu
+
+function MenuIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="4" x2="20" y1="12" y2="12" />
+      <line x1="4" x2="20" y1="6" y2="6" />
+      <line x1="4" x2="20" y1="18" y2="18" />
+    </svg>
+  )
+}
+
