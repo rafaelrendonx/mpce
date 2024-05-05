@@ -7,6 +7,9 @@ export const isProjectType = (obj: any): obj is Project => {
 		obj.shortDescription !== undefined &&
 		obj.address !== undefined &&
 		obj.lat !== undefined &&
-		obj.lng !== undefined
+		obj.lng !== undefined &&
+		obj.slug !== undefined &&
+		obj.images !== undefined &&
+		obj.description !== undefined 
 	);
 };
