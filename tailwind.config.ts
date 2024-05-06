@@ -37,6 +37,10 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      screens: {
+        "xxsm": "375px",
+        "xsm": "430px",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
