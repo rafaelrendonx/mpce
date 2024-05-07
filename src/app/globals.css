@@ -2,3 +2,11 @@
   @tailwind components;
   @tailwind utilities;
   
+
+  .cls-1 {
+    fill: #f7b032;
+  }
+
+  .cls-1, .cls-2 {
+    stroke-width: 0px;
+  }
