@@ -1,7 +1,6 @@
 'use client'
 
 export const MpceLogo = ({ width, height }) => {
-    console.log(width)
     return (
         <div>
             <svg viewBox="0 0 1080 1080" width={width} height={height}>

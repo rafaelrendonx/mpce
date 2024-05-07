@@ -15,7 +15,7 @@ import {
 
 export const Navbar = () => {
   return (
-    <header className="flex h-20 w-full shrink-0 items-center">
+    <div className="flex w-full shrink-0 items-center">
 
       <div className="flex w-full justify-center">
         <NavigationMenu className="">
@@ -31,7 +31,7 @@ export const Navbar = () => {
             <NavigationMenuLink asChild>
               <Link
                 className="group inline-flex h-9 w-max items-center justify-center rounded-md text-white text-sm font-medium px-4"
-                href="#"
+                href="/portafolio"
               >
                 Portafolio
               </Link>
@@ -49,7 +49,7 @@ export const Navbar = () => {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-    </header>
+    </div>
   )
 }
 
