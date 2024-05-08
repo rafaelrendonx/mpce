@@ -1,10 +1,7 @@
-'use client'
-
 import Link from "next/link";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -30,13 +27,13 @@ export const ResponsiveMenu = () => {
           </SheetHeader>
 
           <div className="grid gap-2 py-6 pt-10">
-            <Link className="flex w-full items-center py-2 text-lg font-semibold" href="#">
+            <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/servicios">
               Servicios
             </Link>
-            <Link className="flex w-full items-center py-2 text-lg font-semibold" href="#">
+            <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/portafolio">
               Portafolio
             </Link>
-            <Link className="flex w-full items-center py-2 text-lg font-semibold" href="#">
+            <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/contacto">
               Contacto
             </Link>
           </div>
@@ -51,7 +48,7 @@ export const ResponsiveMenu = () => {
 
 export default ResponsiveMenu
 
-function MenuIcon(props) {
+function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
