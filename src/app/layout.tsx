@@ -71,7 +71,7 @@ export default function RootLayout({
 				)}
 			>
 				<header className='absolute w-full z-10'>
-					<div className='flex justify-between drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] lg:container px-2'>
+					<div className='flex justify-between drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] lg:container'>
 						<Link href={'/'}>
 							<Image
 								src={logo}

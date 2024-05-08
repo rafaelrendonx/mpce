@@ -10,8 +10,8 @@ import whatsappIcon from '@/../public/whatsapp-white-icon.svg';
 
 export const Footer = () => {
 	return (
-		<footer className='bg-gray-700 flex items-center justify-center p-5'>
-			<div className='flex flex-col gap-5'>
+		<footer className='bg-gray-700 flex items-center justify-center'>
+			<div className='flex flex-col gap-2'>
 				{/* Logo & name */}
 				<div className='flex flex-col items-center -space-y-5'>
 					<Image
@@ -20,17 +20,16 @@ export const Footer = () => {
 						width={100}
 						height={100}
 						priority
-						className='md:size-32'
 					/>
 					<small className='text-white'>
-						Mantenimiento, proyecto y construcción electrica
+						Mantenimiento, proyecto y construcción electromecánica
 					</small>
 				</div>
 
 				{/* Address */}
-				<div className='flex items-center'>
-					<MapPin color='white' />
-					<p className='text-white text-[10px] sm:text-xs md:text-sm lg:text-base text-justify'>
+				<div className='flex items-center gap-px'>
+					<MapPin color='white' size={17}/>
+					<p className='text-white text-[10px] sm:text-sm tracking-tighter text-justify'>
 						{mpceAddress}
 					</p>
 				</div>
@@ -72,7 +71,7 @@ export const Footer = () => {
 
 				{/* Copy right */}
 				<div>
-					<p className='text-white text-[10px] sm:text-xs md:text-sm lg:text-base text-center'>
+					<p className='text-white text-[10px] sm:text-sm text-center'>
 						© 2024 MPCE
 					</p>
 				</div>
