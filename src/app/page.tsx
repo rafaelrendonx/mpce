@@ -8,8 +8,9 @@ import whatsappIcon from '@/../public/whatsapp-white-icon.svg';
 
 export default async function Home() {
 	return (
-		<div>
-			<div className="bg-[url('https://source.unsplash.com/random/?Construction&12')] min-h-[100vh] bg-no-repeat bg-cover">
+		<div className=''>
+			
+			<div className="bg-[url('https://source.unsplash.com/random/?Construction&12')] min-h-[100vh] bg-no-repeat bg-cover flex items-center justify-center">
 				<div className='flex min-h-[80vh] items-center p-5 justify-center xsm:pt-20 sm:pt-4 md:pb-20'>
 					<div className='text-center font-thin text-white bg-zinc-800 relative opacity-75 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] py-4 sm:px-12 sm:font-extralight lg:py-8 lg:px-40 lg:font-light'>
 						<h1 className='text-3xl sm:text-6xl'>MPCE</h1>
@@ -141,12 +142,13 @@ export default async function Home() {
 						<div></div>
 					</div>
 
-					<div className='max-md:flex max-md:flex-col gap-8 justify-center items-center md:grid md:grid-cols-2 lg:grid-cols-3'>
+					<div className='flex flex-col gap-8 justify-center items-center md:grid md:grid-cols-2 lg:grid-cols-3 border'>
 						<Image
 							src={'https://source.unsplash.com/random/?Construction&7'}
 							width={600}
 							height={300}
 							alt='imagen1'
+              className='border border-red-500'
 						/>
 						<Image
 							src={'https://source.unsplash.com/random/?Construction&2'}
