@@ -17,19 +17,19 @@ export const Navbar = () => {
   return (
     <>
 
-      <NavigationMenu className="">
-        <NavigationMenuList>
+      <NavigationMenu>
+        <NavigationMenuList className='space-x-5'>
           <NavigationMenuLink asChild>
             <Link
-              className="group inline-flex w-max items-center justify-center text-white font-medium pr-2"
-              href="#"
+              className="group inline-flex w-max items-center justify-center text-white font-medium hover:text-mbceYellow"
+              href='/servicios'
             >
               Servicios
             </Link>
           </NavigationMenuLink>
           <NavigationMenuLink asChild>
             <Link
-              className="group inline-flex w-max items-center justify-center text-white font-medium px-8"
+              className="group inline-flex w-max items-center justify-center text-white font-medium hover:text-mbceYellow"
               href="/portafolio"
             >
               Portafolio
@@ -37,8 +37,8 @@ export const Navbar = () => {
           </NavigationMenuLink>
           <NavigationMenuLink asChild>
             <Link
-              className="group inline-flex w-max items-center justify-center text-white font-medium"
-              href="#"
+              className="group inline-flex w-max items-center justify-center text-white font-medium hover:text-mbceYellow"
+              href='/contacto'
             >
               Contacto
             </Link>

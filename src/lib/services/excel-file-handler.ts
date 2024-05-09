@@ -3,7 +3,7 @@ import * as xlsx from 'xlsx';
 
 const convertFileToJSON = (filePath: string) => {
 	return new Promise<unknown[]>((resolve, reject) => {
-		const absolutePath = `${process.cwd()}/public${filePath}`;
+		const absolutePath = `${process.cwd()}${filePath}`;
 
 		fs.readFile(absolutePath, (err, data) => {
 			if (err) {

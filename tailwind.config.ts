@@ -41,6 +41,14 @@ const config = {
         "xxsm": "375px",
         "xsm": "430px",
       },
+      backgroundImage:{
+        'portafolio-banner': 'url("/images/portafolio-banner-1.png")',
+      },
+      colors:{
+        mbceYellow:{
+          DEFAULT: '#F7B032',
+        }
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
