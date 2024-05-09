@@ -15,13 +15,13 @@ export const ImagesGallery = ({ images }: Props) => {
 
 	return (
 		<div className='flex flex-col gap-5'>
-			<div className='w-full h-60 lg:h-96 relative border'>
+			<div className='w-full h-60 lg:h-96 relative'>
 				<AspectRatio ratio={16 / 9}>
 					<Image
 						src={selectedImage || ''}
 						alt='Customer Image'
 						fill
-						className='object-contain'
+						className=''
 					/>
 				</AspectRatio>
 			</div>

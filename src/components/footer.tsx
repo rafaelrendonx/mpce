@@ -10,80 +10,45 @@ import whatsappIcon from '@/../public/whatsapp-white-icon.svg';
 
 export const Footer = () => {
 	return (
-		<>
-			<footer className='bg-gray-700 flex items-center justify-center pb-5 px-5'>
-				<div className='flex flex-col gap-5'>
-					{/* Logo & name */}
-					<div className='flex flex-col items-center -space-y-5'>
-						<Image
-							src={logo}
-							alt='MPCE Logo'
-							width={100}
-							height={100}
-							priority
-							className='sm:size-32 md:size-40 lg:size-48'
-						/>
-						<small className='text-white text-center'>
-							Mantenimiento, Proyectos y Construcción Electromecánica
-						</small>
+
+		<footer className='bg-gray-700 flex min-h-[10vh] items-center relative'>
+			<div className='absolute w-full z-10'>
+				<div className='flex items-center justify-between lg:container'>
+
+					{/* Copy right */}
+					<div className='basis-1/2 text-[10px] pl-5 lg:pl-0'>
+						<p className='text-white sm:text-xs md:text-sm lg:text-base'>
+							© 2024 Mantenimiento, Proyectos y Construcción Electromecánica
+						</p>
 					</div>
 
-					{/* Address */}
-					<div className='flex items-center justify-between flex-col pt-5'>
-						<MapPin color='white' />
-						<div className='text-white text-[10px] sm:text-xs md:text-sm lg:text-base text-center pt-1 px-5'>
-							<div className='flex items-center gap-px'>
-								<MapPin color='white' size={17} />
-								<p className='text-white text-[10px] sm:text-sm tracking-tighter text-justify'>
-									{mpceAddress}
-								</p>
-							</div>
+					{/* Socials */} 
+					<div className='flex flex-col basis-1/2 pr-5 lg:pr-0'>
+						<ul className='text-white flex items-center justify-end gap-5'>
+							<li>
+								<Link className='flex items-center' href={`https://www.instagram.com/mpce.hmo/`}>
+									<InstagramIcon />
+								</Link>
+							</li>
+							<li>
+								<Link className='flex items-center' href={'https://facebook.com/MpCe256/'}>
+									<FacebookIcon />
+								</Link>
+							</li>
+							<li>
+								<Link className='flex items-center' href={'#'} >
+									<Image width={25} height={25} src={whatsappIcon.src} alt='whatsapp'
+									/>
+								</Link>
+							</li>
+						</ul>
 
-							{/* Socials */}
-							<div className='pt-5'>
-								<ul className='text-white flex items-center justify-center gap-16'>
-									<li>
-										<Link
-											className='flex items-center gap-1'
-											href={`https://www.instagram.com/mpce.hmo/`}
-										>
-											<InstagramIcon />
-										</Link>
-									</li>
-									<li>
-										<Link
-											className='flex items-center gap-1'
-											href={'https://facebook.com/MpCe256/'}
-										>
-											<FacebookIcon />
-										</Link>
-									</li>
-									<li>
-										<Link
-											className='flex items-center gap-1'
-											href={'#'}
-										>
-											<Image
-												width={30}
-												height={30}
-												src={whatsappIcon.src}
-												alt='whatsapp'
-											/>
-										</Link>
-									</li>
-								</ul>
-							</div>
-
-							{/* Copy right */}
-							<div className='pt-5'>
-								<p className='text-white text-[10px] sm:text-xs md:text-sm lg:text-base text-center'>
-									© 2024 MPCE
-								</p>
-							</div>
-						</div>
 					</div>
 				</div>
-			</footer>
-		</>
+
+			</div>
+
+		</footer>
+
 	);
 };

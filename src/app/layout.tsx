@@ -67,9 +67,9 @@ export default function RootLayout({
 			>
 				<header className='absolute w-full z-10'>
 
-					<div className='flex justify-between drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'>
+					<div className='flex justify-between drop-shadow-2xl lg:container'>
 						<Link href={'/'}>
-							<Image src={logo} alt='MPCE Logo' width={100} height={100} className='sm:size-32 md:size-40 lg:size-48' priority />
+							<Image src={logo} alt='MPCE Logo' width={80} height={80} className='sm:size-24 md:size-28 lg:size-32' priority />
 						</Link>
 
 						<div className='flex justify-end items-center px-2 sm:px-4 md:px-6 lg:px-8'>

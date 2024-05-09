@@ -23,7 +23,7 @@ const PortafolioPage = async () => {
 				</div>
 			</section>
 
-			<section className='px-3 lg:px-0 lg:container'>
+			<section className='px-3 lg:px-0 lg:container min-h-[80vh]'>
 				<div className='flex flex-col gap-5'>
 					<h2 className='text-lg font-bold text-center'>
 						PROYECTOS DE MANTENIMIENTO Y CONSTRUCCIÓN
