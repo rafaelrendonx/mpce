@@ -21,3 +21,117 @@ export const mpceContactPeople = [
 
 export const mpceAddress =
 	'Av. Juan Romero, Col. Arco Iris C.P. 83285 Hermosillo, Sonora, México';
+
+export const mpceServices = [
+	{
+		id: 0,
+		name: 'Construcción',
+		icon: '/icons/construction-icon.svg',
+		details: [
+			{
+				id: 0,
+				description: 'Construcción eléctrica',
+			},
+			{
+				id: 1,
+				description: 'Construcción en el área de plomería',
+			},
+			{
+				id: 2,
+				description: 'Construcción en el área de HVAC',
+			},
+		],
+	},
+	{
+		id: 1,
+		name: 'Mantenimiento',
+		icon: '/icons/renovation-icon.svg',
+		details: [
+			{
+				id: 0,
+				description: 'Mantenimiento eléctrico',
+			},
+			{
+				id: 1,
+				description: 'Mantenimiento en el área de herrería',
+			},
+			{
+				id: 3,
+				description: 'Mantenimiento en el área de plomería',
+			},
+			{
+				id: 4,
+				description: 'Mantenimiento de aires acondicionados',
+			},
+		],
+	},
+	{
+		id: 2,
+		name: 'Electrica',
+		icon: '/icons/electric-icon.svg',
+		details: [
+			{
+				id: 0,
+				description: 'Instalaciones eléctricas',
+			},
+			{
+				id: 1,
+				description: 'Reparaciones eléctricas',
+			},
+			{
+				id: 2,
+				description: 'Mantenimiento eléctrico',
+			},
+		],
+	},
+	{
+		id: 3,
+		name: 'Plomeria',
+		icon: '/icons/repair-icon.svg',
+		details: [
+			{
+				id: 0,
+				description: 'Instalaciones de plomería',
+			},
+			{
+				id: 1,
+				description: 'Reparaciones de plomería',
+			},
+			{
+				id: 2,
+				description: 'Mantenimiento de plomería',
+			},
+		],
+	},
+	{
+		id: 4,
+		name: 'Hidraulica',
+		icon: '/icons/consultation-icon.svg',
+		details: [
+			{
+				id: 0,
+				description: 'Instalaciones hidráulicas',
+			},
+			{
+				id: 1,
+				description: 'Reparaciones hidráulicas',
+			},
+			{
+				id: 2,
+				description: 'Mantenimiento hidráulico',
+			},
+		],
+	},
+	{
+		id: 5,
+		name: 'Y mas...',
+		icon: '/icons/box-icon.svg',
+		details: [
+			{
+				id: 0,
+				description:
+					'Nos adaptamos a las necesidades del proyecto o lo que necesite',
+			},
+		],
+	},
+];
