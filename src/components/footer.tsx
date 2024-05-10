@@ -11,7 +11,7 @@ import whatsappIcon from '@/../public/whatsapp-white-icon.svg';
 export const Footer = () => {
 	return (
 
-		<footer className='bg-gray-700 flex min-h-[10vh] items-center relative'>
+		<footer className='bg-mbceYellow/90 flex min-h-[10vh] items-center relative'>
 			
 			<div className='absolute w-full z-10'>
 				
