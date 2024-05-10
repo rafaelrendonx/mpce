@@ -31,6 +31,14 @@ export const Navbar = () => {
 					<NavigationMenuLink asChild>
 						<Link
 							className='text-white text-sm font-medium hover:text-mbceYellow'
+							href='/nosotros'
+						>
+							Nosotros
+						</Link>
+					</NavigationMenuLink>
+					<NavigationMenuLink asChild>
+						<Link
+							className='text-white text-sm font-medium hover:text-mbceYellow'
 							href='/contacto'
 						>
 							Contacto
