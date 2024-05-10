@@ -27,22 +27,12 @@ export default async function Home() {
 						<h2 className='text-4xl pb-5'>MPCE</h2>
 						<div></div>
 						<p className='pt-5'>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
-							ullam! Pariatur voluptate illum ipsam sit culpa fuga voluptatem ad
-							eligendi distinctio illo laborum tempora, provident nihil,
-							nesciunt aut quis saepe! Lorem ipsum dolor sit amet consectetur
-							adipisicing elit. Mollitia, laudantium quia, eius odit commodi
-							quidem nobis repudiandae error aut sequi voluptatem labore
-							corrupti, at in voluptatibus libero deleniti dignissimos
-							praesentium. Lorem ipsum dolor sit amet consectetur, adipisicing
-							elit. Commodi repellat, aliquam natus exercitationem aut
-							consectetur amet laborum sed nihil. Nihil incidunt ipsa voluptas
-							accusamus sed laboriosam vitae aut iure rerum? Lorem ipsum dolor
-							sit amet consectetur, adipisicing elit. Sapiente veritatis, magnam
-							repellat blanditiis fugit corrupti! Vitae molestias minima,
-							suscipit dolor maiores ex repudiandae delectus, enim accusamus
-							deleniti reiciendis rem! Quidem?
+							Comprometidos con la excelencia, nuestro objetivo es brindar a cada uno de nuestros clientes las mejores soluciones para sus proyectos de mantenimiento y construcción. Nos dedicamos a superar las expectativas, brindar confianza y establecer un estándar de servicio que refleje nuestra dedicación a la satisfacción del cliente y a la calidad de nuestros servicios.
+							<br />
+							<br />
+							Aspiramos a posicionarnos como una empresa líder en los distintos campos que nos desarrollamos. Comprometidos a mantenernos a la vanguardia de avances tecnológicos en la industria, con el fin de elevar constantemente nuestros estándares de satisfacción y calidad en la prestación de servicios. Buscando superar las expectativas de nuestros clientes, estableciendo así un referente de excelencia en cada proyecto que emprendemos.
 						</p>
+
 					</div>
 				</section>
 
@@ -80,7 +70,7 @@ export default async function Home() {
 						<div></div>
 					</div>
 
-					{/* <div className='flex flex-col gap-8 justify-center items-center md:grid md:grid-cols-2 lg:grid-cols-3 border'>
+					<div className='flex flex-col gap-8 justify-center items-center md:grid md:grid-cols-2 lg:grid-cols-3 border'>
 						<Image
 							src={'https://source.unsplash.com/random/?Construction&16'}
 							width={600}
@@ -123,7 +113,7 @@ export default async function Home() {
 							height={300}
 							alt='imagen6'
 						/>
-					</div> */}
+					</div>
 				</section>
 
 				{/* Contacto */}

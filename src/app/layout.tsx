@@ -45,14 +45,19 @@ export const metadata: Metadata = {
 		},
 	],
 	openGraph: {
+		title: 'MPCE',
+		description: 'Mantenimiento, Proyectos y Construcción Electromecánica',
+		url: 'https://mpce.vercel.app/',
+		siteName: 'MPCE',
 		images: [
 			{
 				alt: 'MPCE Logo',
 				width: 768,
 				height: 500,
-				url: '/logo.svg',
+				url: 'https://i.ibb.co/ggLdkWg/mpce.png',
 			},
 		],
+		type: 'website',
 	},
 };
 
@@ -73,7 +78,7 @@ export default function RootLayout({
 						</Link>
 
 						<div className='flex justify-end items-center px-2 sm:px-4 md:px-6 lg:px-8 2xl:pr-0'>
-				
+
 							<div className='hidden md:flex'>
 								<Navbar />
 							</div>
@@ -81,7 +86,7 @@ export default function RootLayout({
 							<div className='md:hidden'>
 								<ResponsiveMenu />
 							</div>
-							
+
 						</div>
 
 					</div>
