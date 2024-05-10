@@ -70,13 +70,15 @@ function Contacto() {
 
                     <div className='flex flex-col lg:flex-col lg:basis-1/2 lg:items-center text-center py-5'>
                         <p className=''>Av. Juan Romero, Col. Arco Iris. <br /> C.P. 83285 Hermosillo, Sonora​​</p>
-                        <Image
-                            src={'https://source.unsplash.com/random/?Map&1'}
-                            width={1000}
-                            height={500}
-                            alt='imagen1'
-                            className='rounded-sm aspect-video'
-                        />
+                        <iframe
+							src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3488.457321187691!2d-110.99425942382531!3d29.033051865778894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ce83d46e25ad17%3A0xc8e8f9cedfb7366a!2sMPCE(MANTENIMIENTO%2C%20PROYECTO%20Y%20CONSTRUCCION%20ELECTRICA)!5e0!3m2!1ses-419!2smx!4v1715380382890!5m2!1ses-419!2smx'
+							width='600'
+							height='450'
+							allowFullScreen
+							loading='lazy'
+							referrerPolicy='no-referrer-when-downgrade'
+                            className='w-full'
+						></iframe>
                     </div>
                 </div>
 
