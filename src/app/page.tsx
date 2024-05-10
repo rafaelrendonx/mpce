@@ -12,8 +12,8 @@ export default async function Home() {
 			
 			<div className="bg-[url('https://source.unsplash.com/random/?Construction&12')] min-h-[100vh] bg-no-repeat bg-cover flex items-center justify-center">
 				<div className='flex min-h-[80vh] items-center p-5 justify-center xsm:pt-20 sm:pt-4 md:pb-20'>
-					<div className='text-center font-light text-black bg-mbceYellow relative opacity-65 shadow-lg py-4 sm:px-12 sm:font-extralight lg:py-8 lg:px-40 lg:font-normal'>
-						<h1 className='text-3xl sm:text-6xl'>MPCE</h1>
+					<div className='text-center text-black bg-mbceYellow/55 relative shadow-lg py-4 sm:px-12 sm:font-extralight lg:py-8 lg:px-40 lg:font-normal'>
+						<h1 className='text-3xl sm:text-6xl drop-shadow-lg'>MPCE</h1>
 						<p className='sm:p-5'>
 							Mantenimiento, Proyectos y Construcción Electromecánica
 						</p>

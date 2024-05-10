@@ -12,18 +12,20 @@ export const Footer = () => {
 	return (
 
 		<footer className='bg-gray-700 flex min-h-[10vh] items-center relative'>
+			
 			<div className='absolute w-full z-10'>
-				<div className='flex items-center justify-between lg:container'>
+				
+				<div className='flex items-center lg:container lg:pl-4 lg:pr-4 xl:pl-4 xl:pr-4 2xl:pl-0 2xl:pr-0'>
 
 					{/* Copy right */}
-					<div className='basis-1/2 text-[10px] pl-5 lg:pl-0'>
+					<div className='basis-1/2 text-[10px] pl-5 2xl:pl-0'>
 						<p className='text-white sm:text-xs md:text-sm lg:text-base'>
 							© 2024 Mantenimiento, Proyectos y Construcción Electromecánica
 						</p>
 					</div>
 
 					{/* Socials */} 
-					<div className='flex flex-col basis-1/2 pr-5 lg:pr-0'>
+					<div className='flex flex-col basis-1/2 pr-5 2xl:pr-0'>
 						<ul className='text-white flex items-center justify-end gap-5'>
 							<li>
 								<Link className='flex items-center' href={`https://www.instagram.com/mpce.hmo/`}>
