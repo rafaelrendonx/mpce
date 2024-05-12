@@ -33,7 +33,7 @@ export const ContactForm = () => {
 			className='space-y-5'
 		>
 			<h2 className='text-2xl font-bold underline underline-offset-2 decoration-mbceYellow'>
-				Contactanos
+				Contáctanos
 			</h2>
 
 			<div>

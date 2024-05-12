@@ -3,18 +3,21 @@ export const mpceContactPeople = [
 		id: 0,
 		name: 'Ing. Jesús Fernando Ocampo Moreno',
 		phoneNumber: '(662) 466-9086',
+		phoneWhatsapp: '+526624669086',
 		email: 'jesusocampo@mpce.mx',
 	},
 	{
 		id: 1,
-		name: 'Lic. Ruben Antonio Ocampo Moreno',
+		name: 'Lic. Rubén Antonio Ocampo Moreno',
 		phoneNumber: '(662) 107-8845',
+		phoneWhatsapp: '+526621078845',
 		email: 'rubenantonioom@mpce.mx',
 	},
 	{
 		id: 2,
-		name: 'Ing. Ruben Arturo Ocampo Ramirez',
+		name: 'Ing. Rubén Arturo Ocampo Ramírez',
 		phoneNumber: '(662) 100-6960',
+		phoneWhatsapp: '+526611006960',
 		email: 'rubenarturo@prodigy.net.mx',
 	},
 ];

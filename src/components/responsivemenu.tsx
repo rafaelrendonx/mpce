@@ -5,6 +5,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetClose,
 } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 
@@ -27,15 +28,30 @@ export const ResponsiveMenu = () => {
           </SheetHeader>
 
           <div className="grid gap-2 py-6 pt-10">
-            <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/servicios">
-              Servicios
-            </Link>
-            <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/portafolio">
-              Portafolio
-            </Link>
-            <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/contacto">
-              Contacto
-            </Link>
+            
+            <SheetClose asChild>
+              <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/nosotros">
+                Nosotros
+              </Link>
+            </SheetClose>
+
+            <SheetClose asChild>
+              <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/servicios">
+                Servicios
+              </Link>
+            </SheetClose>
+
+            <SheetClose asChild>
+              <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/portafolio">
+                Portafolio
+              </Link>
+            </SheetClose>
+
+            <SheetClose asChild>
+              <Link className="flex w-full items-center py-2 text-lg font-semibold" href="/contacto">
+                Contacto
+              </Link>
+            </SheetClose>
           </div>
 
         </SheetContent>

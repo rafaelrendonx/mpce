@@ -17,6 +17,7 @@ const paragraphFont = Roboto_Slab({ subsets: ['latin'] });
 const NosotrosPage = async () => {
 	return (
 		<main className='space-y-10'>
+			{/*
 			<section className='h-[400px] bg-portafolio-banner bg-fixed bg-center bg-cover bg-no-repeat'>
 				<div className='size-full text-center flex flex-col items-center justify-center gap-5 text-white bg-black/70'>
 					<h1 className='text-2xl xl:text-4xl font-semibold'>Nosotros</h1>
@@ -31,6 +32,15 @@ const NosotrosPage = async () => {
 					</p>
 				</div>
 			</section>
+			*/}
+
+			<div className="bg-[url('https://source.unsplash.com/random/?Construction&12')] min-h-[25vh] bg-no-repeat bg-cover flex items-center justify-center">
+				<div className='flex min-h-[25vh] items-center justify-center pt-10'>
+					<div className='text-center font-light text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.9)] sm:font-normal lg:py-8 lg:px-40'>
+						<h1 className='text-5xl'>Nosotros</h1>
+					</div>
+				</div>
+			</div>
 
 			<div className='space-y-10'>
 				{/* Misión */}
@@ -127,7 +137,7 @@ const NosotrosPage = async () => {
 						{/* Data */}
 						<ul
 							className={cn(
-								'text-balance tracking-wide list-disc list-inside space-y-5 text-justify leading-relaxed lg:text-lg ',
+								'text-balance tracking-wide list-disc list-inside space-y-5 leading-relaxed lg:text-lg ',
 								paragraphFont.className,
 							)}
 						>
