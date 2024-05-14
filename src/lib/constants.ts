@@ -70,7 +70,7 @@ export const mpceServices = [
 	},
 	{
 		id: 2,
-		name: 'Electrica',
+		name: 'Eléctrica',
 		icon: '/icons/electric-icon.svg',
 		details: [
 			{
@@ -108,7 +108,7 @@ export const mpceServices = [
 	},
 	{
 		id: 4,
-		name: 'Hidraulica',
+		name: 'Hidráulica',
 		icon: '/icons/consultation-icon.svg',
 		details: [
 			{
@@ -127,7 +127,7 @@ export const mpceServices = [
 	},
 	{
 		id: 5,
-		name: 'Y mas...',
+		name: 'Y más...',
 		icon: '/icons/box-icon.svg',
 		details: [
 			{

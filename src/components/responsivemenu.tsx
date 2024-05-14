@@ -17,7 +17,7 @@ export const ResponsiveMenu = () => {
 
         <SheetTrigger asChild>
           <Button size="icon" className="bg-transparent hover:bg-transparent">
-            <MenuIcon className="h-10 w-10" />
+            <MenuIcon className="h-10 w-10" color="black" />
           </Button>
         </SheetTrigger>
 

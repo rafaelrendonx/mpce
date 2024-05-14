@@ -4,20 +4,44 @@ import Link from 'next/link';
 
 import { MailIcon, PhoneIcon, UserIcon } from 'lucide-react';
 
+import { heavitasFont } from '@/config/fonts';
+
 import { mpceContactPeople, mpceServices } from '@/lib/constants';
 
 import whatsappIcon from '@/../public/whatsapp-white-icon.svg';
+import { cn } from '@/lib/utils';
 
 export default async function Home() {
 	return (
-		<div className=''>
+		<div>
 			<div className="bg-[url('https://source.unsplash.com/random/?Construction&12')] min-h-[100vh] bg-no-repeat bg-cover flex items-center justify-center">
 				<div className='flex min-h-[80vh] items-center p-5 justify-center xsm:pt-20 sm:pt-4 md:pb-20'>
-					<div className='text-center text-black bg-mbceYellow/60 relative shadow-lg py-4 sm:px-12 sm:font-extralight lg:py-8 lg:px-40 lg:font-normal rounded-sm'>
-						<h1 className='text-6xl sm:text-6xl drop-shadow-lg'>MPCE</h1>
-						<p className='sm:p-5'>
+					<div
+						className={cn(
+							'text-center text-black bg-mbceYellow/95 relative shadow-lg py-4 sm:px-12 sm:font-extralight lg:py-8 lg:px-40 lg:font-normal rounded-sm',
+							'flex flex-col gap-5'
+							// heavitasFont.className,
+						)}
+					>
+						<h1
+							className={cn(
+								'text-6xl sm:text-6xl drop-shadow-lg',
+								heavitasFont.className,
+							)}
+						>
+							MPCE
+						</h1>
+						<p className='font-medium'>
 							Mantenimiento, Proyectos y Construcción Electromecánica
 						</p>
+
+						<div className='bg-white rounded-full max-w-sm mx-auto w-10/12'>
+
+							<span className='text-black font-bold text-lg'>
+									¡Excelencia y determinación!
+							</span>
+
+						</div>
 					</div>
 				</div>
 			</div>
@@ -29,12 +53,22 @@ export default async function Home() {
 						<h2 className='text-4xl pb-5'>MPCE</h2>
 						<div></div>
 						<p className='pt-5'>
-							Comprometidos con la excelencia, nuestro objetivo es brindar a cada uno de nuestros clientes las mejores soluciones para sus proyectos de mantenimiento y construcción. Nos dedicamos a superar las expectativas, brindar confianza y establecer un estándar de servicio que refleje nuestra dedicación a la satisfacción del cliente y a la calidad de nuestros servicios.
+							Comprometidos con la excelencia, nuestro objetivo es brindar a
+							cada uno de nuestros clientes las mejores soluciones para sus
+							proyectos de mantenimiento y construcción. Nos dedicamos a superar
+							las expectativas, brindar confianza y establecer un estándar de
+							servicio que refleje nuestra dedicación a la satisfacción del
+							cliente y a la calidad de nuestros servicios.
 							<br />
 							<br />
-							Aspiramos a posicionarnos como una empresa líder en los distintos campos que nos desarrollamos. Comprometidos a mantenernos a la vanguardia de avances tecnológicos en la industria, con el fin de elevar constantemente nuestros estándares de satisfacción y calidad en la prestación de servicios. Buscando superar las expectativas de nuestros clientes, estableciendo así un referente de excelencia en cada proyecto que emprendemos.
+							Aspiramos a posicionarnos como una empresa líder en los distintos
+							campos que nos desarrollamos. Comprometidos a mantenernos a la
+							vanguardia de avances tecnológicos en la industria, con el fin de
+							elevar constantemente nuestros estándares de satisfacción y
+							calidad en la prestación de servicios. Buscando superar las
+							expectativas de nuestros clientes, estableciendo así un referente
+							de excelencia en cada proyecto que emprendemos.
 						</p>
-
 					</div>
 				</section>
 
@@ -146,18 +180,26 @@ export default async function Home() {
 										</div>
 
 										<div className='flex items-center gap-2'>
-											<Image src={whatsappIcon} alt='WhatsappIcon' className='size-5 invert' />
-											<Link className='text-xs'
-												href={`https://wa.me/${person.phoneWhatsapp}?text=¡Hola!+Me+gustaría+información+de+un+servicio`}>
+											<Image
+												src={whatsappIcon}
+												alt='WhatsappIcon'
+												className='size-5 invert'
+											/>
+											<Link
+												className='text-xs'
+												href={`https://wa.me/${person.phoneWhatsapp}?text=¡Hola!+Me+gustaría+información+de+un+servicio`}
+											>
 												Enviar mensaje por Whastapp
 											</Link>
 										</div>
 
 										<div className='flex items-center gap-2'>
-											<MailIcon strokeWidth={1} className='size-5' />
+											<MailIcon
+												strokeWidth={1}
+												className='size-5'
+											/>
 											<span className='text-xs'>{person.email}</span>
 										</div>
-
 									</li>
 								);
 							})}
