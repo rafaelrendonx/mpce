@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { Playfair_Display, Roboto_Slab } from 'next/font/google';
 
-import { cn } from '@/lib/utils';
+import { cn, shimmerPlaceholderGenerator } from '@/lib/utils';
 
 import { ContactForm } from '@/components/contact-form';
 
@@ -75,7 +75,7 @@ const NosotrosPage = async () => {
 							src={firstImage}
 							alt='Misión'
 							fill
-							priority
+							placeholder={shimmerPlaceholderGenerator(500,500)}
 							sizes='100vw'
 							className='object-cover rounded-tl-[60px] rounded-br-[60px] md:rounded-tl-[80px] md:rounded-br-[80px] animate-fade-in-opacity'
 						/>
@@ -115,7 +115,7 @@ const NosotrosPage = async () => {
 							src={secondImage}
 							alt='Visión'
 							fill
-							priority
+							placeholder={shimmerPlaceholderGenerator(500,500)}
 							sizes='100vw'
 							className='object-cover rounded-tl-[60px] rounded-bl-[60px] md:rounded-tl-[80px] md:rounded-bl-[80px] animate-fade-in-opacity'
 						/>
@@ -169,7 +169,7 @@ const NosotrosPage = async () => {
 							src={thirdImage}
 							alt='Nuestros valores'
 							fill
-							priority
+							placeholder={shimmerPlaceholderGenerator(500,500)}
 							sizes='100vw'
 							className='object-cover rounded-tr-[60px] rounded-bl-[60px] md:rounded-tr-[80px] md:rounded-bl-[80px] animate-fade-in-opacity'
 						/>
