@@ -6,18 +6,17 @@ import { heavitasFont } from '@/config/fonts';
 
 import { mpceServices } from '@/lib/constants';
 
-
 import { cn } from '@/lib/utils';
 
 export default async function Home() {
 	return (
 		<div>
 			<div className="bg-[url('https://source.unsplash.com/random/?Construction&12')] min-h-[100vh] bg-no-repeat bg-cover flex items-center justify-center">
-				<div className='flex min-h-[80vh] items-center p-5 justify-center xsm:pt-20 sm:pt-4 md:pb-20'>
+				<div className='flex min-h-[80vh] container items-center p-4 xsm:px-8 sm:px-10 md:px-12 lg:px-20 xl:px-24 2xl:px-36 3xl:px-12 justify-center xsm:pt-20 sm:pt-4 md:pb-20'>
 					<div
 						className={cn(
-							'text-center text-black bg-mbceYellow/95 relative shadow-lg py-4 sm:px-12 sm:font-extralight lg:py-8 lg:px-40 lg:font-normal rounded-sm',
-							'flex flex-col gap-5'
+							'text-center text-black bg-mbceYellow/85 relative shadow-lg py-4 sm:px-12 sm:font-extralight lg:py-8 lg:px-40 lg:font-normal rounded-sm',
+							'flex flex-col gap-4',
 							// heavitasFont.className,
 						)}
 					>
@@ -29,17 +28,18 @@ export default async function Home() {
 						>
 							MPCE
 						</h1>
-						<p className='font-medium'>
+						<p className='font-medium text-lg xsm:text-xl sm:text-3xl md:text-4xl xl:text-6xl'>
 							Mantenimiento, Proyectos y Construcción Electromecánica
 						</p>
-
+						{/*
 						<div className='bg-white rounded-full max-w-sm mx-auto w-10/12'>
-
-							<span className='text-black font-bold text-lg'>
-								¡Excelencia y determinación!
-							</span>
-
+						
+						<span className='text-black font-bold text-lg'>
+						¡Excelencia y determinación!
+						</span>
+						
 						</div>
+						*/}
 					</div>
 				</div>
 			</div>
@@ -104,7 +104,7 @@ export default async function Home() {
 						<div></div>
 					</div>
 
-					<div className='flex flex-col gap-8 justify-center items-center md:grid md:grid-cols-2 lg:grid-cols-3 border'>
+					<div className='flex flex-col gap-8 justify-center items-center md:grid md:grid-cols-2 lg:grid-cols-3'>
 						<Image
 							src={'https://source.unsplash.com/random/?Construction&16'}
 							width={600}
@@ -149,7 +149,6 @@ export default async function Home() {
 						/>
 					</div>
 				</section>
-
 			</main>
 		</div>
 	);
