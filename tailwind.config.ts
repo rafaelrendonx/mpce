@@ -112,6 +112,12 @@ const config = {
 			fontFamily: {
 				sans: ['var(--font-sans)', ...fontFamily.sans],
 			},
+			fontSize: {
+				xxxs: ['0.575rem', '0.625rem'],
+				xxs: ['0.625rem', '0.75rem'],
+				xsm: ['0.825rem', '1.125rem'],
+				xba: ['0.925rem', '1.375rem'],
+			  },
 			screens: {
 				xxsm: '375px',
 				xsm: '430px',
