@@ -121,6 +121,7 @@ const config = {
 			screens: {
 				xxsm: '375px',
 				xsm: '430px',
+				'3xl': '1680px',
 			},
 			backgroundImage: {
 				'portafolio-banner': 'url("/images/portafolio-banner-1.png")',
