@@ -3,8 +3,6 @@ import Link from 'next/link';
 
 import { MailIcon, PhoneIcon, User, UserIcon } from 'lucide-react';
 
-import { mpceContactPeople } from '@/lib/constants';
-
 import whatsappIcon from '@/../public/whatsapp-white-icon.svg';
 
 function Contacto() {

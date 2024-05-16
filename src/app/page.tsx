@@ -2,13 +2,11 @@ import Image from 'next/image';
 
 import Link from 'next/link';
 
-import { MailIcon, PhoneIcon, UserIcon } from 'lucide-react';
-
 import { heavitasFont } from '@/config/fonts';
 
-import { mpceContactPeople, mpceServices } from '@/lib/constants';
+import { mpceServices } from '@/lib/constants';
 
-import whatsappIcon from '@/../public/whatsapp-white-icon.svg';
+
 import { cn } from '@/lib/utils';
 
 export default async function Home() {
@@ -38,7 +36,7 @@ export default async function Home() {
 						<div className='bg-white rounded-full max-w-sm mx-auto w-10/12'>
 
 							<span className='text-black font-bold text-lg'>
-									¡Excelencia y determinación!
+								¡Excelencia y determinación!
 							</span>
 
 						</div>
@@ -152,60 +150,6 @@ export default async function Home() {
 					</div>
 				</section>
 
-				{/* Contacto */}
-				<section id='contacto'>
-					<div className='py-10 divide-y-2 divide-black'>
-						<h2 className='text-4xl pb-5 text-center'>Contacto</h2>
-						<div></div>
-					</div>
-					<div>
-						<ul className='flex flex-col md:flex-row md:justify-between gap-5'>
-							{mpceContactPeople.map((person) => {
-								return (
-									<li
-										key={person.id}
-										className='bg-gray-200 shadow p-2 lg:p-5 flex flex-col gap-1 lg:grow group relative overflow-hidden z-10 rounded-lg'
-									>
-										<div className='absolute -right-24 -top-24 scale-0 bg-[#f7b032] group-hover:scale-[5] size-60 rounded-full transition-all -z-10 duration-300' />
-										<div className='flex items-center gap-2'>
-											<UserIcon className='size-5' />
-											<span className='text-xs'>{person.name}</span>
-										</div>
-
-										<div className='flex items-center gap-2'>
-											<PhoneIcon className='size-5' />
-											<span className='font-bold text-xs'>
-												{person.phoneNumber}
-											</span>
-										</div>
-
-										<div className='flex items-center gap-2'>
-											<Image
-												src={whatsappIcon}
-												alt='WhatsappIcon'
-												className='size-5 invert'
-											/>
-											<Link
-												className='text-xs'
-												href={`https://wa.me/${person.phoneWhatsapp}?text=¡Hola!+Me+gustaría+información+de+un+servicio`}
-											>
-												Enviar mensaje por Whastapp
-											</Link>
-										</div>
-
-										<div className='flex items-center gap-2'>
-											<MailIcon
-												strokeWidth={1}
-												className='size-5'
-											/>
-											<span className='text-xs'>{person.email}</span>
-										</div>
-									</li>
-								);
-							})}
-						</ul>
-					</div>
-				</section>
 			</main>
 		</div>
 	);
