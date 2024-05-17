@@ -52,14 +52,7 @@ const PortafolioByCustomerIdPage: React.FC<Props> = async ({ params }) => {
 
 				{/* Information Column */}
 				<section className='space-y-5'>
-					{/*<h1
-						className={cn(
-							'text-3xl lg:text-5xl text-balance text-center font-bold tracking-tighter',
-							futuraBoldFont.className,
-						)}
-					>
-						{name}
-					</h1>*/}
+					
 					<div className={cn('space-y-px text-lg', futuraFont.className)}>
 						<p className='tracking-tight leading-tight'>
 							{customerDescription}

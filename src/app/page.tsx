@@ -51,7 +51,9 @@ export default async function Home() {
 				{/* MPCE */}
 				<section className='text-center'>
 					<div className='divide-y-[1px] divide-black'>
-						<h2 className={cn('text-4xl pb-5', futuraBoldFont.className )}>MPCE</h2>
+						<h2 className={cn('text-4xl pb-5', futuraBoldFont.className)}>
+							MPCE
+						</h2>
 						<div></div>
 						<p className='pt-5 text-xl'>
 							Comprometidos con la excelencia, nuestro objetivo es brindar a
@@ -76,7 +78,9 @@ export default async function Home() {
 				{/* Nuestros servicios */}
 				<section className='text-center'>
 					<div className='py-10 divide-y-2 divide-black'>
-					<h2 className={cn('text-4xl pb-5', futuraBoldFont.className )}>Nuestros servicios</h2>
+						<h2 className={cn('text-4xl pb-5', futuraBoldFont.className)}>
+							Nuestros servicios
+						</h2>
 						<div></div>
 					</div>
 
@@ -103,7 +107,9 @@ export default async function Home() {
 				{/* Portafolio */}
 				<section className='text-center'>
 					<div className='py-10 divide-y-2 divide-black'>
-					<h2 className={cn('text-4xl pb-5', futuraBoldFont.className )}>Portafolio</h2>
+						<h2 className={cn('text-4xl pb-5', futuraBoldFont.className)}>
+							Portafolio
+						</h2>
 						<div></div>
 					</div>
 
