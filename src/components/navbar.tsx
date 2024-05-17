@@ -5,11 +5,14 @@ import { usePathname } from 'next/navigation';
 
 import { mainNavigationRoutes } from '@/config/routes';
 
+import { heavitasFont } from '@/config/fonts';
+
 import {
 	NavigationMenu,
 	NavigationMenuLink,
 	NavigationMenuList,
 } from '@/components/ui/navigation-menu';
+import { cn } from '@/lib/utils';
 
 export const Navbar = () => {
 	const pathname = usePathname();
@@ -24,9 +27,12 @@ export const Navbar = () => {
 							key={route.href}
 						>
 							<Link
-								className={`text-black text-sm md:text-base font-medium hover:text-mbceYellow transition-colors ${
-									pathname === route.href ? 'text-mbceYellow' : ''
-								}`}
+								className={cn(
+									`text-black text-sm md:text-base font-medium hover:text-mbceYellow transition-colors ${
+										pathname === route.href ? 'text-mbceYellow' : ''
+									}`,
+									heavitasFont.className,
+								)}
 								href={route.href}
 							>
 								{route.label}

@@ -76,7 +76,7 @@ export default function RootLayout({
 				)}
 			>
 				<header className='fixed w-full z-10 bg-white shadow-[0_0_30px_rgba(0,0,0,.2)]'>
-					<div className='flex justify-between drop-shadow-2xl lg:container lg:pl-4 lg:pr-4 xl:pl-4 xl:pr-4 2xl:pl-0 2xl:pr-0 animate-fade-in-opacity transition-opacity'>
+					<div className='flex justify-between drop-shadow-2xl lg:container sm:pl-2 md:pl-4 lg:pl-6 lg:pr-4 xl:pl-6 xl:pr-4 2xl:pl-0 2xl:pr-5 animate-fade-in-opacity transition-opacity'>
 						<Link href={'/'}>
 							<Image
 								src={logo}
