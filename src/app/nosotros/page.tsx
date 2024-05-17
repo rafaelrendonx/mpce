@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { cn } from '@/lib/utils';
+import { cn, shimmerPlaceholderGenerator } from '@/lib/utils';
 
 import firstImage from '@/../public/about-us-1.svg';
 import secondImage from '@/../public/about-us-2.svg';
@@ -55,6 +55,7 @@ const NosotrosPage = async () => {
 							alt='Misión'
 							fill
 							priority
+							placeholder={shimmerPlaceholderGenerator(500,500)}
 							sizes='100vw'
 							className='object-cover rounded-tl-[60px] rounded-br-[60px] md:rounded-tl-[80px] md:rounded-br-[80px] animate-fade-in-opacity'
 						/>
@@ -95,6 +96,7 @@ const NosotrosPage = async () => {
 							alt='Visión'
 							fill
 							priority
+							placeholder={shimmerPlaceholderGenerator(500,500)}
 							sizes='100vw'
 							className='object-cover rounded-tl-[60px] rounded-bl-[60px] md:rounded-tl-[80px] md:rounded-bl-[80px] animate-fade-in-opacity'
 						/>
@@ -149,6 +151,7 @@ const NosotrosPage = async () => {
 							alt='Nuestros valores'
 							fill
 							priority
+							placeholder={shimmerPlaceholderGenerator(500,500)}
 							sizes='100vw'
 							className='object-cover rounded-tr-[60px] rounded-bl-[60px] md:rounded-tr-[80px] md:rounded-bl-[80px] animate-fade-in-opacity'
 						/>
