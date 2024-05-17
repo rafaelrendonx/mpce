@@ -34,3 +34,5 @@ export const shimmerPlaceholderGenerator = (w: number, h: number) => {
 		shimmerSvgGenerator(w, h),
 	)}` as const;
 };
+
+

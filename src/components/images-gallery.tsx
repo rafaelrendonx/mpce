@@ -14,19 +14,21 @@ export const ImagesGallery = ({ images }: Props) => {
 	const [selectedImage, setSelectedImage] = useState(images[0]);
 
 	return (
-		<div className='flex flex-col gap-5'>
-			<div className='w-full h-60 lg:h-96 relative'>
+		<div className='flex flex-col'>
+
+			<div className='w-full h-40'>
 				<AspectRatio ratio={16 / 9}>
 					<Image
 						src={selectedImage || ''}
 						alt='Customer Image'
 						fill
-						className=''
+						className='rounded-sm'
 					/>
 				</AspectRatio>
 			</div>
-			<div>
-				<ul className='overflow-x-scroll grid grid-flow-col justify-start gap-2 px-1 pb-1 border-b border-x border-white rounded-sm'>
+			
+			<div className='border flex'>
+				<ul className='overflow-x-scroll grid grid-flow-col justify-start gap-2 border-b border-x border-white rounded-sm'>
 					{images.map((image) => (
 						<li
 							key={image}
@@ -43,6 +45,7 @@ export const ImagesGallery = ({ images }: Props) => {
 					))}
 				</ul>
 			</div>
+
 		</div>
 	);
 };
