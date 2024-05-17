@@ -33,6 +33,6 @@ export const shimmerPlaceholderGenerator = (w: number, h: number) => {
 	return `data:image/svg+xml;base64,${toBase64(
 		shimmerSvgGenerator(w, h),
 	)}` as const;
-
 };
+
 
