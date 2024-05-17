@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import Link from 'next/link';
 
-import { heavitasFont } from '@/config/fonts';
+import { heavitasFont, futuraFont, futuraBoldFont } from '@/config/fonts';
 
 import { mpceServices } from '@/lib/constants';
 
@@ -12,23 +12,21 @@ export default async function Home() {
 	return (
 		<div>
 			<div className="bg-[url('https://source.unsplash.com/random/?Construction&12')] min-h-[100vh] bg-no-repeat bg-cover flex items-center justify-center">
-				<div className='flex min-h-[80vh] container items-center p-4 xsm:px-8 sm:px-10 md:px-12 lg:px-20 xl:px-24 2xl:px-36 3xl:px-12 justify-center xsm:pt-20 sm:pt-4 md:pb-20'>
+				<div className='flex min-h-[80vh] container items-center p-4 xsm:px-8 sm:px-6 md:px-8 lg:px-8 xl:px-10 1.5xl:px-20 2xl:px-10 3xl:px-10 justify-center pb-24 sm:pt-4 md:pb-36'>
 					<div
 						className={cn(
 							'text-center text-black bg-mbceYellow/85 relative shadow-lg py-4 sm:px-12 sm:font-extralight lg:py-8 lg:px-40 lg:font-normal rounded-sm',
 							'flex flex-col gap-4',
-							// heavitasFont.className,
+							heavitasFont.className,
 						)}
 					>
-						<h1
+						<h1 className={cn('text-6xl sm:text-6xl drop-shadow-lg')}>MPCE</h1>
+
+						<p
 							className={cn(
-								'text-6xl sm:text-6xl drop-shadow-lg',
-								heavitasFont.className,
+								'text-sm xsm:text-lg sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl',
 							)}
 						>
-							MPCE
-						</h1>
-						<p className='font-medium text-lg xsm:text-xl sm:text-3xl md:text-4xl xl:text-6xl'>
 							Mantenimiento, Proyectos y Construcción Electromecánica
 						</p>
 						{/*
@@ -44,13 +42,18 @@ export default async function Home() {
 				</div>
 			</div>
 
-			<main className='flex flex-col gap-10 py-10 px-3 2xl:px-0 lg:container'>
+			<main
+				className={cn(
+					'flex flex-col gap-10 py-10 px-3 2xl:px-0 lg:container',
+					futuraFont.className,
+				)}
+			>
 				{/* MPCE */}
 				<section className='text-center'>
 					<div className='divide-y-[1px] divide-black'>
-						<h2 className='text-4xl pb-5'>MPCE</h2>
+						<h2 className={cn('text-4xl pb-5', futuraBoldFont.className )}>MPCE</h2>
 						<div></div>
-						<p className='pt-5'>
+						<p className='pt-5 text-xl'>
 							Comprometidos con la excelencia, nuestro objetivo es brindar a
 							cada uno de nuestros clientes las mejores soluciones para sus
 							proyectos de mantenimiento y construcción. Nos dedicamos a superar
@@ -70,10 +73,10 @@ export default async function Home() {
 					</div>
 				</section>
 
-				{/* Lo que hacemos */}
+				{/* Nuestros servicios */}
 				<section className='text-center'>
 					<div className='py-10 divide-y-2 divide-black'>
-						<h2 className='text-4xl pb-5'>Lo que hacemos</h2>
+					<h2 className={cn('text-4xl pb-5', futuraBoldFont.className )}>Nuestros servicios</h2>
 						<div></div>
 					</div>
 
@@ -84,7 +87,7 @@ export default async function Home() {
 									key={service.id}
 									className='bg-gray-200 shadow p-2 lg:p-5 flex flex-col items-center even:bg-mbceYellow gap-1'
 								>
-									<h3 className='text-xl font-bold'>{service.name}</h3>
+									<h3 className='text-2xl font-bold'>{service.name}</h3>
 									<Image
 										src={service.icon}
 										width={80}
@@ -100,7 +103,7 @@ export default async function Home() {
 				{/* Portafolio */}
 				<section className='text-center'>
 					<div className='py-10 divide-y-2 divide-black'>
-						<h2 className='text-4xl pb-5'>Portafolio</h2>
+					<h2 className={cn('text-4xl pb-5', futuraBoldFont.className )}>Portafolio</h2>
 						<div></div>
 					</div>
 

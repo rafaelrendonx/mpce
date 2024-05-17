@@ -5,33 +5,46 @@ import { MailIcon, PhoneIcon } from 'lucide-react';
 
 import whatsappIcon from '@/../public/whatsapp-white-icon.svg';
 
+import { cn } from '@/lib/utils';
+import { heavitasFont, futuraFont, futuraBoldFont } from '@/config/fonts';
+
 function Contacto() {
 	return (
 		<div>
 			<div className="bg-[url('https://source.unsplash.com/random/?Construction&12')] min-h-[25vh] bg-no-repeat bg-cover flex items-center justify-center">
 				<div className='flex min-h-[25vh] items-center justify-center pt-10'>
 					<div className='text-center font-light text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:font-normal lg:py-8 lg:px-40 lg:font-light'>
-						<h1 className='text-5xl'>Contacto</h1>
+						<h1 className={cn('text-4xl', heavitasFont.className)}>Contacto</h1>
 					</div>
 				</div>
 			</div>
 
 			<div className='lg:container p-5 xl:px-0'>
 				<div className='lg:flex lg:items-center lg:justify-between'>
-					<h2 className='font-semibold text-md text-center xsm:text-xl lg:text-2xl lg:basis-1/2 xl:text-3xl py-5'>
+					<h2
+						className={cn(
+							'font-semibold text-md text-center xsm:text-xl lg:text-2xl lg:basis-1/2 xl:text-3xl py-5',
+							futuraBoldFont.className,
+						)}
+					>
 						¿Te interesan nuestros servicios? <br className='max-lg:hidden' />
 						<br />
 						Comunícate con nosotros:
 					</h2>
 
-					<ul className='flex flex-col lg:flex-col lg:basis-1/2'>
+					<ul
+						className={cn(
+							'flex flex-col lg:flex-col lg:basis-1/2 font-bold text-sm xsm:text-base sm:text-lg',
+							futuraFont.className,
+						)}
+					>
 						<li className='bg-gray-200 shadow p-2 lg:p-5 flex flex-col lg:grow group relative overflow-hidden rounded-sm gap-3 lg:gap-6 xl:gap-10 z-10'>
 							<div className='absolute -right-1 -top-24 scale-0 bg-[#f7b032] group-hover:scale-[5] size-64 rounded-full transition-all -z-10 duration-300' />
 
 							<div className='flex items-center gap-2'>
 								<PhoneIcon className='size-5' />
 								<Link
-									className='font-bold text-xs lg:text-base'
+									className=''
 									href={'tel:6624669086'}
 								>
 									Llamar al (662) 466-9086
@@ -45,7 +58,7 @@ function Contacto() {
 									className='size-5 invert'
 								/>
 								<Link
-									className='text-xs lg:text-base'
+									className=''
 									href={`https://wa.me/+526624669086?text=¡Hola!+Me+gustaría+información+de+un+servicio`}
 								>
 									Enviar mensaje por Whastapp
@@ -58,7 +71,7 @@ function Contacto() {
 									className='size-5'
 								/>
 								<Link
-									className='text-xs lg:text-base'
+									className=''
 									href={`mailto:administracion@mpce.com.mx?subject=Contacto desde página web&body=Me gustaría información de los servicios`}
 								>
 									Enviar email a administracion@mpce.mx
@@ -70,7 +83,12 @@ function Contacto() {
 
 				<div className='pt-10 lg:pt-20 lg:flex lg:items-center lg:justify-between text-center'>
 					<div className='lg:flex lg:flex-col lg:basis-1/2'>
-						<h2 className='font-semibold text-md text-center xsm:text-xl lg:text-2xl xl:text-3xl py-3'>
+						<h2
+							className={cn(
+								'font-semibold text-md text-center xsm:text-xl lg:text-2xl xl:text-3xl py-3',
+								futuraBoldFont.className,
+							)}
+						>
 							O vísitanos en: <br />
 							<br className='max-lg:hidden' />
 							<span className='font-semibold pb-2 text-sm lg:text-lg'>

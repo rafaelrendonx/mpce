@@ -1,18 +1,21 @@
 
+import { cn } from '@/lib/utils';
+import { heavitasFont, futuraFont, futuraBoldFont } from '@/config/fonts';
+
 function Servicios() {
   return (
     <div>
 
       <div className="bg-[url('https://source.unsplash.com/random/?Construction&12')] min-h-[25vh] bg-no-repeat bg-cover flex items-center justify-center">
-        <div className='flex min-h-[25vh] items-center justify-center pt-10'>
+        <div className='flex min-h-[25vh] items-center justify-center'>
           <div className='text-center font-light text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] sm:font-normal lg:py-8 lg:px-40 lg:font-light'>
-            <h1 className='text-5xl'>Servicios</h1>
+            <h1 className={cn('text-4xl', heavitasFont.className,)}>Servicios</h1>
           </div>
         </div>
       </div>
 
-      <div className='lg:container lg:pl-0 lg:pr-0 lg:py-10 py-5'>
-        <div className='sm:grid sm:grid-cols-2 lg:grid lg:grid-cols-3'>
+      <div className='px-3 lg:container lg:pl-0 lg:pr-0 lg:py-10 py-5'>
+        <div className='sm:grid sm:gap-2 sm:grid-cols-2 lg:grid lg:grid-cols-3'>
 
           <div className='flex flex-col items-center pb-5'>
 
@@ -32,8 +35,8 @@ function Servicios() {
                 />
               </svg>
             </div>
-            <h3 className='text-3xl py-2'>Mantenimiento</h3>
-            <p className='pb-5'>
+            <h3 className={cn('text-3xl py-2', futuraBoldFont.className,)}>Mantenimiento</h3>
+            <p className={cn('pb-5 text-lg text-center', futuraFont.className,)}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Quibusdam iste laborum, voluptatum porro odio in ad expedita
               sint mollitia ratione, saepe a, maxime voluptates dolore quam
@@ -58,8 +61,8 @@ function Servicios() {
                 />
               </svg>
             </div>
-            <h3 className='text-3xl py-2'>Proyectos</h3>
-            <p className='pb-5'>
+            <h3 className={cn('text-3xl py-2', futuraBoldFont.className,)}>Proyectos</h3>
+            <p className={cn('pb-5 text-lg text-center', futuraFont.className,)}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Deserunt, voluptatum. Necessitatibus, unde expedita accusamus
               iure earum doloribus facilis. Qui similique atque voluptatibus
@@ -84,8 +87,8 @@ function Servicios() {
                 />
               </svg>
             </div>
-            <h3 className='text-3xl py-2'>Construcción</h3>
-            <p className='pb-5'>
+            <h3 className={cn('text-3xl py-2', futuraBoldFont.className,)}>Construcción</h3>
+            <p className={cn('pb-5 text-lg text-center', futuraFont.className,)}>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
               quaerat corrupti vel velit mollitia inventore amet culpa quis
               minus, ullam sequi error ducimus veritatis aliquam. Atque
@@ -111,8 +114,8 @@ function Servicios() {
                 />
               </svg>
             </div>
-            <h3 className='text-3xl py-2'>Mantenimiento</h3>
-            <p className='pb-5'>
+            <h3 className={cn('text-3xl py-2',futuraBoldFont.className,)}>Mantenimiento</h3>
+            <p className={cn('pb-5 text-lg text-center', futuraFont.className,)}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Quibusdam iste laborum, voluptatum porro odio in ad expedita
               sint mollitia ratione, saepe a, maxime voluptates dolore quam
@@ -137,8 +140,8 @@ function Servicios() {
                 />
               </svg>
             </div>
-            <h3 className='text-3xl py-2'>Proyectos</h3>
-            <p className='pb-5'>
+            <h3 className={cn('text-3xl py-2', futuraBoldFont.className,)}>Proyectos</h3>
+            <p className={cn('pb-5 text-lg text-center', futuraFont.className,)}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Deserunt, voluptatum. Necessitatibus, unde expedita accusamus
               iure earum doloribus facilis. Qui similique atque voluptatibus
@@ -146,7 +149,7 @@ function Servicios() {
             </p>
           </div>
 
-          <div className='flex flex-col items-center pb-5'>
+          <div className='flex flex-col items-center'>
             <div className='pt-3 pb-5'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -163,8 +166,8 @@ function Servicios() {
                 />
               </svg>
             </div>
-            <h3 className='text-3xl py-2'>Construcción</h3>
-            <p className='pb-5'>
+            <h3 className={cn('text-3xl py-2', futuraBoldFont.className,)}>Construcción</h3>
+            <p className={cn('pb-5 text-lg text-center', futuraFont.className,)}>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
               quaerat corrupti vel velit mollitia inventore amet culpa quis
               minus, ullam sequi error ducimus veritatis aliquam. Atque

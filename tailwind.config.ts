@@ -113,14 +113,17 @@ const config = {
 				sans: ['var(--font-sans)', ...fontFamily.sans],
 			},
 			fontSize: {
-				xxxs: ['0.575rem', '0.625rem'],
-				xxs: ['0.625rem', '0.75rem'],
+				'4xs': ['0.375rem', '0.25rem'],
+				'3xs': ['0.44rem', '0.5rem'],
+				'2xs': ['0.525rem', '0.75rem'],
+				'1.5xs': ['0.61rem', '0.75rem'],
 				xsm: ['0.825rem', '1.125rem'],
 				xba: ['0.925rem', '1.375rem'],
 			  },
 			screens: {
 				xxsm: '375px',
 				xsm: '430px',
+				'1.5xl': '1440px',
 				'3xl': '1680px',
 			},
 			backgroundImage: {
