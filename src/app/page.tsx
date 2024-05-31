@@ -2,11 +2,21 @@ import Image from 'next/image';
 
 import Link from 'next/link';
 
-import { heavitasFont, futuraFont, futuraBoldFont } from '@/config/fonts';
+import { heavitasFont } from '@/config/fonts';
 
 import { mpceServices } from '@/lib/constants';
 
 import { cn } from '@/lib/utils';
+
+import { Card, CardContent } from '@/components/ui/card';
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from '@/components/ui/carousel';
+import { Separator } from '@/components/ui/separator';
 
 export default async function Home() {
 	return (
@@ -44,18 +54,15 @@ export default async function Home() {
 
 			<main
 				className={cn(
-					'flex flex-col gap-10 py-10 px-3 2xl:px-0 lg:container',
-					futuraFont.className,
+					'flex flex-col gap-10 py-10 px-3 2xl:px-0 lg:container font-roboto',
 				)}
 			>
 				{/* MPCE */}
 				<section className='text-center'>
 					<div className='divide-y-[1px] divide-black'>
-						<h2 className={cn('text-4xl pb-5', futuraBoldFont.className)}>
-							MPCE
-						</h2>
+						<h2 className={cn('text-4xl pb-5 font-bold')}>MPCE</h2>
 						<div></div>
-						<p className='pt-5 text-xl'>
+						<p className='pt-5 text-lg'>
 							Comprometidos con la excelencia, nuestro objetivo es brindar a
 							cada uno de nuestros clientes las mejores soluciones para sus
 							proyectos de mantenimiento y construcción. Nos dedicamos a superar
@@ -76,15 +83,63 @@ export default async function Home() {
 				</section>
 
 				{/* Nuestros servicios */}
-				<section className='text-center'>
+				<section className='text-center font-roboto'>
 					<div className='py-10 divide-y-2 divide-black'>
-						<h2 className={cn('text-4xl pb-5', futuraBoldFont.className)}>
+						<h2 className={cn('text-4xl pb-5 font-bold')}>
 							Nuestros servicios
 						</h2>
 						<div></div>
 					</div>
 
-					<ul className='grid grid-cols-2 md:grid-cols-3 gap-10'>
+					<div className='px-3 lg:container lg:pl-0 lg:pr-0 lg:py-10 py-5'>
+						<div className='sm:grid sm:gap-2 lg:grid lg:grid-cols-2'>
+							{mpceServices.map((service) => {
+								return (
+									<div key={service.id}>
+										<div className='flex justify-between items-center pb-4 lg:justify-around'>
+											<h3 className={cn('text-lg font-bold py-2 text-center')}>
+												{service.name}
+											</h3>
+											<Image
+												src={service.icon}
+												width={35}
+												height={35}
+												alt='icon-name'
+											/>
+										</div>
+										<div>
+											<Separator className='mb-10' />
+										</div>
+										<Carousel className='w-full max-w-xs pb-10'>
+											<CarouselContent>
+												{service.details.map((subService) => {
+													return (
+														<CarouselItem key={subService.id}>
+															<div className='p-1'>
+																<Card>
+																	<CardContent className='flex aspect-square items-center justify-center p-6'>
+																		<span className='text-xl font-semibold'>
+																			{subService.name}
+																		</span>
+																	</CardContent>
+																</Card>
+															</div>
+														</CarouselItem>
+													);
+												})}
+											</CarouselContent>
+											<CarouselPrevious />
+											<CarouselNext />
+										</Carousel>
+									</div>
+								);
+							})}
+							<div></div>
+						</div>
+					</div>
+					{/** 
+					 
+					<ul className='grid grid-cols-2 md:grid-cols-3 gap-10 font-roboto'>
 						{mpceServices.map((service) => {
 							return (
 								<li
@@ -96,18 +151,19 @@ export default async function Home() {
 										src={service.icon}
 										width={80}
 										height={80}
-										alt='electric-icon'
+										alt='icon-name'
 									/>
 								</li>
 							);
 						})}
 					</ul>
+				**/}
 				</section>
 
 				{/* Portafolio */}
 				<section className='text-center'>
 					<div className='py-10 divide-y-2 divide-black'>
-						<h2 className={cn('text-4xl pb-5', futuraBoldFont.className)}>
+						<h2 className={cn('text-4xl pb-5 font-roboto font-bold')}>
 							Portafolio
 						</h2>
 						<div></div>

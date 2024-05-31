@@ -1,7 +1,5 @@
 import type { Config } from 'tailwindcss';
 
-const { fontFamily } = require('tailwindcss/defaultTheme');
-
 const config = {
 	darkMode: ['class'],
 	content: [
@@ -110,7 +108,8 @@ const config = {
 				blinker: 'blinker 1s infinite linear',
 			},
 			fontFamily: {
-				sans: ['var(--font-sans)', ...fontFamily.sans],
+				inter: ['var(--font-inter)'],
+				roboto: ['var(--font-roboto)'],
 			},
 			fontSize: {
 				'4xs': ['0.375rem', '0.25rem'],
@@ -119,7 +118,7 @@ const config = {
 				'1.5xs': ['0.61rem', '0.75rem'],
 				xsm: ['0.825rem', '1.125rem'],
 				xba: ['0.925rem', '1.375rem'],
-			  },
+			},
 			screens: {
 				xxsm: '375px',
 				xsm: '430px',
@@ -144,46 +143,45 @@ const config = {
 					'900': '#762e11',
 					'950': '#441504',
 				},
-				border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+				border: 'hsl(var(--border))',
+				input: 'hsl(var(--input))',
+				ring: 'hsl(var(--ring))',
+				background: 'hsl(var(--background))',
+				foreground: 'hsl(var(--foreground))',
+				primary: {
+					DEFAULT: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--primary-foreground))',
+				},
+				secondary: {
+					DEFAULT: 'hsl(var(--secondary))',
+					foreground: 'hsl(var(--secondary-foreground))',
+				},
+				destructive: {
+					DEFAULT: 'hsl(var(--destructive))',
+					foreground: 'hsl(var(--destructive-foreground))',
+				},
+				muted: {
+					DEFAULT: 'hsl(var(--muted))',
+					foreground: 'hsl(var(--muted-foreground))',
+				},
+				accent: {
+					DEFAULT: 'hsl(var(--accent))',
+					foreground: 'hsl(var(--accent-foreground))',
+				},
+				popover: {
+					DEFAULT: 'hsl(var(--popover))',
+					foreground: 'hsl(var(--popover-foreground))',
+				},
+				card: {
+					DEFAULT: 'hsl(var(--card))',
+					foreground: 'hsl(var(--card-foreground))',
+				},
 			},
 			borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
-        sm: "calc(var(--radius) - 4px)",
-      },
-      
+				lg: `var(--radius)`,
+				md: `calc(var(--radius) - 2px)`,
+				sm: 'calc(var(--radius) - 4px)',
+			},
 		},
 	},
 	plugins: [require('tailwindcss-animate')],

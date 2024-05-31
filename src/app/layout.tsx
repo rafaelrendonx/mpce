@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Inter as FontSans } from 'next/font/google';
+import { Inter, Roboto } from 'next/font/google';
 
 import { cn } from '@/lib/utils';
 
@@ -13,9 +13,17 @@ import './globals.css';
 
 import type { Metadata } from 'next';
 
-const fontSans = FontSans({
+export const inter = Inter({
 	subsets: ['latin'],
-	variable: '--font-sans',
+	variable: '--font-inter',
+});
+
+export const roboto = Roboto({
+	weight: ['400', '700'],
+	style: ['normal'],
+	subsets: ['latin'],
+	display: 'swap',
+	variable: '--font-roboto',
 });
 
 export const metadata: Metadata = {
@@ -68,12 +76,15 @@ export default function RootLayout({
 		<html
 			lang='en'
 			suppressHydrationWarning
+			className={`${inter.variable} ${roboto.variable}`}
 		>
+		
 			<body
 				className={cn(
-					'min-h-screen bg-background font-sans antialiased relative flex flex-col',
-					fontSans.variable,
+					'min-h-screen bg-background antialiased relative flex flex-col',
 				)}
+
+				
 			>
 				<header className='fixed w-full z-10 bg-white shadow-[0_0_30px_rgba(0,0,0,.2)]'>
 					<div className='flex justify-between drop-shadow-2xl lg:container sm:pl-2 md:pl-4 lg:pl-6 lg:pr-4 xl:pl-6 xl:pr-4 2xl:pl-0 2xl:pr-5 animate-fade-in-opacity transition-opacity'>
