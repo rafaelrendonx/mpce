@@ -3,7 +3,7 @@ import { customersData } from '@/db/data';
 import { ImagesGallery } from '@/components/images-gallery';
 
 import { cn } from '@/lib/utils';
-import { heavitasFont, futuraFont, futuraBoldFont } from '@/config/fonts';
+import { heavitasFont } from '@/config/fonts';
 
 interface Props {
 	params: { customerSlug: string };
@@ -42,7 +42,7 @@ const PortafolioByCustomerIdPage: React.FC<Props> = async ({ params }) => {
 				</div>
 			</div>
 
-			<article className='p-5 pb-8 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 lg:container'>
+			<article className='p-5 pb-8 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 lg:container font-roboto'>
 				{/* Gallery Column */}
 				<section>
 					<div className=''>
@@ -53,7 +53,7 @@ const PortafolioByCustomerIdPage: React.FC<Props> = async ({ params }) => {
 				{/* Information Column */}
 				<section className='space-y-5'>
 					
-					<div className={cn('space-y-px text-lg', futuraFont.className)}>
+					<div className={cn('space-y-px text-lg', )}>
 						<p className='tracking-tight leading-tight'>
 							{customerDescription}
 						</p>
@@ -67,11 +67,11 @@ const PortafolioByCustomerIdPage: React.FC<Props> = async ({ params }) => {
 						</p>
 					</div>
 
-					<div className={cn('text-lg', futuraFont.className)}>
+					<div className={cn('text-lg', )}>
 						<span>{description}</span>
 					</div>
 
-					<div className={cn(' ', futuraFont.className)}>
+					<div className={cn(' ', )}>
 						<h2 className='text-lg font-semibold'>
 							Proyectos terminados dentro de la empresa
 						</h2>
@@ -82,7 +82,7 @@ const PortafolioByCustomerIdPage: React.FC<Props> = async ({ params }) => {
 						</ul>
 					</div>
 
-					<div className={cn('text-lg', futuraFont.className)}>
+					<div className={cn('text-lg',)}>
 						<p>{mbceComment}</p>
 					</div>
 				</section>

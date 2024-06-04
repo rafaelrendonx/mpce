@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { customersData } from '@/db/data';
 
 import { cn } from '@/lib/utils';
-import { heavitasFont, futuraFont, futuraBoldFont } from '@/config/fonts';
+import { heavitasFont } from '@/config/fonts';
 
 const PortafolioPage = async () => {
 	return (
@@ -18,7 +18,7 @@ const PortafolioPage = async () => {
 				</div>
 			</div>
 
-			<section className='px-3 lg:px-0 lg:container min-h-[75vh] flex items-center justify-center py-5'>
+			<section className='px-3 lg:px-0 lg:container min-h-[75vh] flex items-center justify-center py-5 font-roboto'>
 				<div className='flex flex-col gap-5'>
 					<ul className='flex items-center flex-col sm:flex-row sm:flex-wrap justify-center gap-5 sm:gap-12'>
 						{customersData.map((customer) => {
@@ -29,7 +29,6 @@ const PortafolioPage = async () => {
 									key={customer.id}
 									className={cn(
 										'size-60 ring-0 hover:ring-4 hover:ring-mbceYellow overflow-hidden group relative flex items-center justify-center border-mbceYellow-400 border bg-white text-lg',
-										futuraBoldFont.className,
 									)}
 								>
 									<Image
@@ -43,7 +42,6 @@ const PortafolioPage = async () => {
 										href={`/portafolio/${customer.slug}`}
 										className={cn(
 											'absolute inset-0 grid place-content-center gap-5 bg-black/70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300',
-											
 										)}
 									>
 										<p className='text-lg font-bold text-center'>

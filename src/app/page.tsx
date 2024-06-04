@@ -2,11 +2,23 @@ import Image from 'next/image';
 
 import Link from 'next/link';
 
-import { heavitasFont, futuraFont, futuraBoldFont } from '@/config/fonts';
+import { heavitasFont } from '@/config/fonts';
 
 import { mpceServices } from '@/lib/constants';
 
 import { cn } from '@/lib/utils';
+
+import { Card, CardContent } from '@/components/ui/card';
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from '@/components/ui/carousel';
+import { Separator } from '@/components/ui/separator';
+
+const randomNumber = Math.floor(Math.random() * 10) + 1;
 
 export default async function Home() {
 	return (
@@ -44,18 +56,15 @@ export default async function Home() {
 
 			<main
 				className={cn(
-					'flex flex-col gap-10 py-10 px-3 2xl:px-0 lg:container',
-					futuraFont.className,
+					'flex flex-col gap-10 py-10 px-3 2xl:px-0 lg:container font-roboto',
 				)}
 			>
 				{/* MPCE */}
 				<section className='text-center'>
 					<div className='divide-y-[1px] divide-black'>
-						<h2 className={cn('text-4xl pb-5', futuraBoldFont.className)}>
-							MPCE
-						</h2>
+						<h2 className={cn('text-4xl pb-5 font-bold')}>MPCE</h2>
 						<div></div>
-						<p className='pt-5 text-xl'>
+						<p className='pt-5 text-lg'>
 							Comprometidos con la excelencia, nuestro objetivo es brindar a
 							cada uno de nuestros clientes las mejores soluciones para sus
 							proyectos de mantenimiento y construcción. Nos dedicamos a superar
@@ -76,38 +85,57 @@ export default async function Home() {
 				</section>
 
 				{/* Nuestros servicios */}
-				<section className='text-center'>
+				<section className='text-center font-roboto'>
 					<div className='py-10 divide-y-2 divide-black'>
-						<h2 className={cn('text-4xl pb-5', futuraBoldFont.className)}>
+						<h2 className={cn('text-4xl pb-5 font-bold')}>
 							Nuestros servicios
 						</h2>
 						<div></div>
 					</div>
 
-					<ul className='grid grid-cols-2 md:grid-cols-3 gap-10'>
-						{mpceServices.map((service) => {
-							return (
-								<li
-									key={service.id}
-									className='bg-gray-200 shadow p-2 lg:p-5 flex flex-col items-center even:bg-mbceYellow gap-1'
+					{mpceServices.map((service) => {
+						return (
+							<div key={service.id}>
+								<div
+									className={cn(
+										`${service.image} min-h-[10vh] bg-no-repeat bg-cover`,
+									)}
 								>
-									<h3 className='text-2xl font-bold'>{service.name}</h3>
-									<Image
-										src={service.icon}
-										width={80}
-										height={80}
-										alt='electric-icon'
-									/>
-								</li>
-							);
-						})}
-					</ul>
+									<div className='flex flex-col items-center justify-center min-h-[40vh] container p-5 shadow-slate-950 shadow-sm drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] rounded-sm'>
+										<div className='w-full min-h-[20vh] items-center justify-center'>
+											<div
+												className={cn(
+													'text-white py-5 flex justify-center sm:items-start sm:justify-start',
+												)}
+											>
+												<h3 className={cn('text-4xl sm:text-5xl')}>
+													{service.name}
+												</h3>
+											</div>
+											<div className='text-white flex flex-col sm:min-h-[30vh] sm:items-end sm:justify-end'>
+												{service.details.map((subService) => {
+													return (
+														<p
+															key={subService.id}
+															className='text-white sm:text-lg'
+														>
+															{subService.name}
+														</p>
+													);
+												})}
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						);
+					})}
 				</section>
 
 				{/* Portafolio */}
 				<section className='text-center'>
 					<div className='py-10 divide-y-2 divide-black'>
-						<h2 className={cn('text-4xl pb-5', futuraBoldFont.className)}>
+						<h2 className={cn('text-4xl pb-5 font-roboto font-bold')}>
 							Portafolio
 						</h2>
 						<div></div>

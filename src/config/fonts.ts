@@ -9,13 +9,5 @@ export const heavitasFont = localFont({
 	display: 'swap',
 });
 
-export const futuraFont = localFont({
-	src: '../../public/fonts/Futura.ttf',
-	display: 'swap',
-});
 
-export const futuraBoldFont = localFont({
-	src: '../../public/fonts/FuturaBold.otf',
-	display: 'swap',
-});
 
