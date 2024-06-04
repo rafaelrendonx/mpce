@@ -6,7 +6,7 @@ import { MailIcon, PhoneIcon } from 'lucide-react';
 import whatsappIcon from '@/../public/whatsapp-white-icon.svg';
 
 import { cn } from '@/lib/utils';
-import { heavitasFont, futuraFont, futuraBoldFont } from '@/config/fonts';
+import { heavitasFont } from '@/config/fonts';
 
 function Contacto() {
 	return (
@@ -19,12 +19,12 @@ function Contacto() {
 				</div>
 			</div>
 
-			<div className='lg:container p-5 xl:px-0'>
+			<div className='lg:container p-5 xl:px-0 font-roboto'>
 				<div className='lg:flex lg:items-center lg:justify-between'>
 					<h2
 						className={cn(
 							'font-semibold text-md text-center xsm:text-xl lg:text-2xl lg:basis-1/2 xl:text-3xl py-5',
-							futuraBoldFont.className,
+							
 						)}
 					>
 						¿Te interesan nuestros servicios? <br className='max-lg:hidden' />
@@ -35,7 +35,7 @@ function Contacto() {
 					<ul
 						className={cn(
 							'flex flex-col lg:flex-col lg:basis-1/2 font-bold text-sm xsm:text-base sm:text-lg',
-							futuraFont.className,
+							
 						)}
 					>
 						<li className='bg-gray-200 shadow p-2 lg:p-5 flex flex-col lg:grow group relative overflow-hidden rounded-sm gap-3 lg:gap-6 xl:gap-10 z-10'>
@@ -86,7 +86,7 @@ function Contacto() {
 						<h2
 							className={cn(
 								'font-semibold text-md text-center xsm:text-xl lg:text-2xl xl:text-3xl py-3',
-								futuraBoldFont.className,
+								
 							)}
 						>
 							O vísitanos en: <br />
