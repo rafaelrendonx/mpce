@@ -18,6 +18,8 @@ import {
 } from '@/components/ui/carousel';
 import { Separator } from '@/components/ui/separator';
 
+const randomNumber = Math.floor(Math.random() * 10) + 1;
+
 export default async function Home() {
 	return (
 		<div>
@@ -91,73 +93,43 @@ export default async function Home() {
 						<div></div>
 					</div>
 
-					<div className='px-3 lg:container lg:pl-0 lg:pr-0 lg:py-10 py-5'>
-						<div className='sm:grid sm:gap-2 lg:grid lg:grid-cols-2'>
-							{mpceServices.map((service) => {
-								return (
-									<div key={service.id}>
-										<div className='flex justify-between items-center pb-4 lg:justify-around'>
-											<h3 className={cn('text-lg font-bold py-2 text-center')}>
-												{service.name}
-											</h3>
-											<Image
-												src={service.icon}
-												width={35}
-												height={35}
-												alt='icon-name'
-											/>
-										</div>
-										<div>
-											<Separator className='mb-10' />
-										</div>
-										<Carousel className='w-full max-w-xs pb-10'>
-											<CarouselContent>
+					{mpceServices.map((service) => {
+						return (
+							<div key={service.id}>
+								<div
+									className={cn(
+										`${service.image} min-h-[10vh] bg-no-repeat bg-cover`,
+									)}
+								>
+									<div className='flex flex-col items-center justify-center min-h-[40vh] container p-5 shadow-slate-950 shadow-sm drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] rounded-sm'>
+										<div className='w-full min-h-[20vh] items-center justify-center'>
+											<div
+												className={cn(
+													'text-white py-5 flex justify-center sm:items-start sm:justify-start',
+												)}
+											>
+												<h3 className={cn('text-4xl sm:text-5xl')}>
+													{service.name}
+												</h3>
+											</div>
+											<div className='text-white flex flex-col sm:min-h-[30vh] sm:items-end sm:justify-end'>
 												{service.details.map((subService) => {
 													return (
-														<CarouselItem key={subService.id}>
-															<div className='p-1'>
-																<Card>
-																	<CardContent className='flex aspect-square items-center justify-center p-6'>
-																		<span className='text-xl font-semibold'>
-																			{subService.name}
-																		</span>
-																	</CardContent>
-																</Card>
-															</div>
-														</CarouselItem>
+														<p
+															key={subService.id}
+															className='text-white sm:text-lg'
+														>
+															{subService.name}
+														</p>
 													);
 												})}
-											</CarouselContent>
-											<CarouselPrevious />
-											<CarouselNext />
-										</Carousel>
+											</div>
+										</div>
 									</div>
-								);
-							})}
-							<div></div>
-						</div>
-					</div>
-					{/** 
-					 
-					<ul className='grid grid-cols-2 md:grid-cols-3 gap-10 font-roboto'>
-						{mpceServices.map((service) => {
-							return (
-								<li
-									key={service.id}
-									className='bg-gray-200 shadow p-2 lg:p-5 flex flex-col items-center even:bg-mbceYellow gap-1'
-								>
-									<h3 className='text-2xl font-bold'>{service.name}</h3>
-									<Image
-										src={service.icon}
-										width={80}
-										height={80}
-										alt='icon-name'
-									/>
-								</li>
-							);
-						})}
-					</ul>
-				**/}
+								</div>
+							</div>
+						);
+					})}
 				</section>
 
 				{/* Portafolio */}
