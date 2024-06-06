@@ -50,7 +50,9 @@ export default async function Home() {
 				{/* MPCE */}
 				<section className='text-center'>
 					<div className='divide-y-[1px] divide-black'>
-						<h2 className={cn('text-4xl pb-5 font-bold')}>MPCE</h2>
+						<Link href={'/nosotros'}>
+							<h2 className={cn('text-4xl pb-5 font-bold')}>MPCE</h2>
+						</Link>
 						<div></div>
 						<p className='pt-5 text-lg'>
 							Comprometidos con la excelencia, nuestro objetivo es brindar a
@@ -75,9 +77,11 @@ export default async function Home() {
 				{/* Nuestros servicios */}
 				<section className='text-center font-roboto'>
 					<div className='py-10 divide-y-2 divide-black'>
-						<h2 className={cn('text-4xl pb-5 font-bold')}>
-							Nuestros servicios
-						</h2>
+						<Link href={'/servicios'}>
+							<h2 className={cn('text-4xl pb-5 font-bold')}>
+								Nuestros servicios
+							</h2>
+						</Link>
 						<div></div>
 					</div>
 
@@ -96,9 +100,11 @@ export default async function Home() {
 													'text-white py-5 flex justify-center sm:items-start sm:justify-start',
 												)}
 											>
-												<h3 className={cn('text-4xl sm:text-5xl')}>
-													{service.name}
-												</h3>
+												<Link href={'/servicios'}>
+													<h3 className={cn('text-4xl sm:text-5xl')}>
+														{service.name}
+													</h3>
+												</Link>
 											</div>
 											<div className='text-white flex flex-col sm:min-h-[30vh] sm:items-end sm:justify-end'>
 												{service.details.map((subService) => {
@@ -123,9 +129,11 @@ export default async function Home() {
 				{/* Portafolio */}
 				<section className='text-center'>
 					<div className='py-10 divide-y-2 divide-black'>
-						<h2 className={cn('text-4xl pb-5 font-roboto font-bold')}>
-							Portafolio
-						</h2>
+						<Link href={'/portafolio'}>
+							<h2 className={cn('text-4xl pb-5 font-roboto font-bold')}>
+								Portafolio
+							</h2>
+						</Link>
 						<div></div>
 					</div>
 

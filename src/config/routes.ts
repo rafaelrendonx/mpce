@@ -5,6 +5,10 @@ interface NavigationRoute {
 
 export const mainNavigationRoutes: Array<NavigationRoute> = [
 	{
+		href: '/',
+		label: 'Home',
+	},
+	{
 		href: '/nosotros',
 		label: 'Nosotros',
 	},

@@ -66,17 +66,63 @@ function Servicios() {
 												>
 													<AccordionTrigger className=''>
 														<div className=''>
-															<h4 className={cn('font-semibold text-end text-lg')}>{subService.name}</h4>
+															<h4
+																className={cn(
+																	'font-semibold text-start text-lg',
+																)}
+															>
+																{subService.name}
+															</h4>
 														</div>
 													</AccordionTrigger>
 
 													<AccordionContent>
 														{/**Tercer accordion**/}
-														<p className='text-md text-end'>{subService.description}</p>
+														<p className='text-md text-start'>
+															{subService.description}
+														</p>
+														<div className='flex flex-col gap-3 items-center justify-end p-3 sm:grid sm:grid-cols-3'>
+															{subService.images.map((imagen) => {
+																return (
+																	<div key={subService.id}>
+																		<Image
+																			src={imagen}
+																			alt={subService.name}
+																			width={200}
+																			height={200}
+																			className='size-50'
+																		/>
+																	</div>
+																);
+															})}
+														</div>
 
 														{subService.details.map((description) => {
 															return (
-																<p key={description.id} className={cn('text-md text-end font-semibold')}>{description.name}</p>
+																<div key={description.id}>
+																	<p
+																		className={cn(
+																			'text-md text-start font-semibold',
+																		)}
+																	>
+																		{description.name}
+																	</p>
+																	<div className='flex flex-col gap-3 items-center justify-end p-3 sm:grid sm:grid-cols-3'>
+																		{description.images.map((imagen) => {
+																			return (
+																				<div key={description.id}>
+																					<Image
+																						src={imagen}
+																						alt={subService.name}
+																						width={200}
+																						height={200}
+																						className='size-50'
+																					/>
+																				</div>
+																			);
+																		})}
+																	</div>
+																</div>
 															);
 														})}
 													</AccordionContent>

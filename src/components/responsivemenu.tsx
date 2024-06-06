@@ -33,7 +33,11 @@ export const ResponsiveMenu = () => {
 					className={cn('h-full w-full', heavitasFont.className)}
 				>
 					<SheetHeader>
-						<SheetTitle className='text-2xl font-bold'>MPCE</SheetTitle>
+						<SheetClose asChild>
+							<Link href={'/'}>
+								<SheetTitle className='text-2xl font-bold'>MPCE</SheetTitle>
+							</Link>
+						</SheetClose>
 					</SheetHeader>
 
 					<div className='grid gap-2 py-6 pt-10'>
