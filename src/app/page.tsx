@@ -8,18 +8,6 @@ import { mpceServices } from '@/lib/constants';
 
 import { cn } from '@/lib/utils';
 
-import { Card, CardContent } from '@/components/ui/card';
-import {
-	Carousel,
-	CarouselContent,
-	CarouselItem,
-	CarouselNext,
-	CarouselPrevious,
-} from '@/components/ui/carousel';
-import { Separator } from '@/components/ui/separator';
-
-const randomNumber = Math.floor(Math.random() * 10) + 1;
-
 export default async function Home() {
 	return (
 		<div>
